@@ -6,7 +6,7 @@ var gifArray = [];
 
 $(document).on("click", ".show", showTvGifs); 
   
-//create buttons at top of page from my array
+//create buttons at top of page from array
       function renderButtons() {
 
         $("#buttons").empty();
@@ -18,10 +18,12 @@ $(document).on("click", ".show", showTvGifs);
         tvButton.attr("button-data", tvArray[i]);
         tvButton.text(tvArray[i]);
         $("#buttons").append(tvButton);
-    }
+      }
     
     }
     
+    //add new buttons from the tv show input
+
     $("#add-tv").on("click", function(event) {
         event.preventDefault();
         var tv = $("#tv-input").val().trim();
@@ -30,10 +32,12 @@ $(document).on("click", ".show", showTvGifs);
         $("#tv-input").val("");
       });
 
+      //get gifs from giphy api and append 
+
       function showTvGifs(){
         $("#gifs").empty();
         var tvShow = $(this).attr("button-data");
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + tvShow + "&api_key=XPiB25nCUJRXzHP0Mlre0qO6sXxIP6dl&limit=10";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + tvShow + "&api_key=XPiB25nCUJRXzHP0Mlre0qO6sXxIP6dl&rating=pg&limit=10";
     
         $.ajax({
             url: queryURL,
@@ -42,6 +46,8 @@ $(document).on("click", ".show", showTvGifs);
     
             var results = response.data;
     
+            
+
             for (var j = 0; j < results.length; j++) {
     
             var gifDiv = $("<div class='gif'>");
@@ -56,13 +62,13 @@ $(document).on("click", ".show", showTvGifs);
             gifDiv.append(gifImage);
             $("#gifs").append(gifDiv);
             }
+
+            //animate or pause gifs on click
     
             $("img").on("click", function() {
       
                 var state = $(this).attr("data-state");
-                // If the clicked image's state is still, update its src attribute to what its data-animate value is.
-                // Then, set the image's data-state to animate
-                // Else set src to the data-still value
+
                 if (state === "still") {
                   $(this).attr("src", $(this).attr("data-animate"));
                   $(this).attr("data-state", "animate");
