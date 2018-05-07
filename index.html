@@ -3,36 +3,40 @@
     <head>
         <title>AjaxGif</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Google Fonts-->
         <link href="https://fonts.googleapis.com/css?family=Arimo|Dosis" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+        <!--local style sheet-->
         <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+        <!--jQuery-->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!--local javascript-->
         <script src="assets/javascript/script.js"></script>
     </head>
+
 <body>
 
+    <div id="heading">
+        <h1>TV Show Gifs</h1>
+        <p>Click the buttons to add gifs from popular TV Shows. Click on the gifs to watch them animate.</p>
+        <p>Add your favorite TV Shows to get more gifs!</p>
+    </div>
 
-<div id="heading">
-    <h1>TV Show Gifs</h1>
-    <p>Click the buttons to add gifs from popular TV Shows. Click on the gifs to watch them animate.</p>
-    <p>Add your favorite TV Shows to get more gifs!</p>
-</div>
+    <div id="buttonDiv">
+            <div id="buttons"></div>
+    </div>
 
-<div id="buttonDiv">
-        <div id="buttons"></div>
-</div>
+    <div id="add">
+        <form id="tv-form">
+            <label for="tv-input">Add your favorite TV show:</label>
+            <input type="text" id="tv-input"><br>
+            <input id="add-tv" type="submit" class="btn btn-default" value="Add Show">
+        </form>
+    </div>
 
-<div id="add">
-    <form id="tv-form">
-        <label for="tv-input">Add your favorite TV show:</label>
-        <input type="text" id="tv-input"><br>
-        <input id="add-tv" type="submit" class="btn btn-default" value="Add Show">
-    </form>
-</div>
-
-<div id="gifDiv">
-    <div id="gifs"></div>
-</div>
+    <div id="gifDiv">
+        <div id="gifs"></div>
+    </div>
     
 </body>
 </html>

@@ -8,5 +8,5 @@
 * HTML
 * CSS
 * Javascript
-* AJAX
+* jQuery
 * Giphy API
