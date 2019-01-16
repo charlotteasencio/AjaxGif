@@ -10,3 +10,7 @@
 * Javascript
 * jQuery
 * Giphy API
+
+## Demo
+
+[Gif Finder](https://charlotteasencio.github.io/AjaxGif/)
