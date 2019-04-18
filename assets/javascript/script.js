@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 var tvArray = ["How I Met Your Mother", "Fresh Prince of Bel Aire", "Boy Meets World", "Parks and Recreation", "The Office", "The Big Bang Theory", "Modern Family", "30 Rock", "New Girl", "Queer Eye", "Full House"];
 var gifArray = [];
-    
+var colorArray = ["hotpink", "yellow", "purple"]
 
 $(document).on("click", ".show", showTvGifs); 
   
@@ -13,23 +13,25 @@ $(document).on("click", ".show", showTvGifs);
     
     for (var i = 0; i < tvArray.length; i++) {
         var tvButton = $("<button>");
-        tvButton.addClass(" btn btn-default");
+        tvButton.addClass(" mdc-button mdc-button--raised");
         tvButton.addClass("show");
         tvButton.attr("button-data", tvArray[i]);
         tvButton.text(tvArray[i]);
         $("#buttons").append(tvButton);
-      }
-    
+        }
     }
     
     //add new buttons from the tv show input
 
     $("#add-tv").on("click", function(event) {
         event.preventDefault();
+       
         var tv = $("#tv-input").val().trim();
+        if(tv !== null && tv !== "") {
         tvArray.push(tv);
         renderButtons();
         $("#tv-input").val("");
+        } 
       });
 
       //get gifs from giphy api and append 

@@ -16,6 +16,7 @@ body{
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    cursor:pointer;
 }
 
 .show{
@@ -52,15 +53,24 @@ body{
     margin-top: 35px;
 }
 
-input[type=submit] {
-    padding:5px 15px; 
-    background:white; 
-    border: 1px solid black;
-    cursor:pointer;
-    -webkit-border-radius: 5px;
-    border-radius: 5px; 
-    margin-top: 15px;
-    margin-left: 125px;
+#add-tv {
+    margin-top: 20px;
+}
+
+#topRow {
+    display: flex;
+    justify-content: center;
+}
+
+#topRow input {
+    margin-left: 20px;
+}
+
+#tv-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #gif{
