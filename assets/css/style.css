@@ -101,7 +101,14 @@ button {
 
 #add-tv {
     margin-top: 20px;
+    outline: none;
+    box-shadow: 0 3px rgb(170, 170, 170);
 }
+
+#add-tv:active {
+    box-shadow: 0 1px rgb(170, 170, 170);
+    transform: translateY(2px);
+  }
 
 #topRow {
     display: flex;
