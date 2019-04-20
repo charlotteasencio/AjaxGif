@@ -82,6 +82,10 @@ body{
 
 .gif{
     margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #add{
@@ -109,11 +113,6 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-#gif{
-    height: 300px;
-    width: 300px;
 }
 
 @media only screen and (max-width: 768px) {
