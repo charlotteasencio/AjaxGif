@@ -4,6 +4,10 @@ body{
     margin: 0;
 }
 
+button {
+    outline: none;
+}
+
 #heading{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
