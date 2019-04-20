@@ -13,8 +13,8 @@ $(document).on("click", ".show", showTvGifs);
     
     for (var i = 0; i < tvArray.length; i++) {
         var tvButton = $("<button>");
-        tvButton.addClass(" mdc-button mdc-button--raised");
         tvButton.addClass("show");
+        tvButton.addClass("styledButton")
         tvButton.attr("button-data", tvArray[i]);
         tvButton.text(tvArray[i]);
         $("#buttons").append(tvButton);

@@ -19,15 +19,49 @@ body{
     cursor:pointer;
 }
 
-.show{
+.styledButton{
+    color: #0c0c0c;
+    background: none;
+    position: relative;
+    transition:color 0.25s ease;
     padding:5px 15px; 
     margin: 5px;
-    background:white; 
-    border: 1px solid black;
     cursor:pointer;
     -webkit-border-radius: 5px;
     border-radius: 5px; 
-}
+  }
+
+  .styledButton:hover {
+    color:white;
+  }
+  
+  .styledButton::after{
+    position: absolute;
+    content: '';
+    top:0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
+    transform-origin:left;
+    transition:width 0.25s ease;
+    z-index:-1;
+  }
+
+  .styledButton:hover::after{
+        width: 100%;
+  }
+
+  .addStyledButton {
+    background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
+    padding: 10px 30px; 
+    cursor:pointer;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    color: white;
+    border: none;
+  }
+  
 
 #gifs{
    display: flex;
