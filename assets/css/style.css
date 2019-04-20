@@ -5,7 +5,7 @@ body{
 }
 
 #heading{
-    font-family: 'Didact Gothic', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     padding-top: 5px;
     padding-bottom: 10px;
@@ -20,13 +20,16 @@ body{
 }
 
 .styledButton{
+    font-size: 12px;
     color: #0c0c0c;
     background: none;
     position: relative;
     transition:color 0.25s ease;
-    padding:5px 15px; 
+    padding:10px 20px; 
     margin: 5px;
-    cursor:pointer;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    cursor: pointer;
     -webkit-border-radius: 5px;
     border-radius: 5px; 
   }
@@ -38,14 +41,14 @@ body{
   .styledButton::after{
     position: absolute;
     content: '';
-    top:0;
+    top: 0;
     left: 0;
     width: 0;
     height: 100%;
-    background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
-    transform-origin:left;
-    transition:width 0.25s ease;
-    z-index:-1;
+    background-image: linear-gradient(to bottom right, #f6d365 25%, #fda085 75%);
+    transition: width 0.25s ease;
+    z-index: -1;
+    outline: none;
   }
 
   .styledButton:hover::after{
@@ -53,13 +56,14 @@ body{
   }
 
   .addStyledButton {
-    background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
-    padding: 10px 30px; 
-    cursor:pointer;
+    background-image: linear-gradient(to right, #84fab0 0%, #8f9ef4 51%, #84fab0 100%);
+    padding: 15px 35px; 
+    cursor: pointer;
     box-shadow: 0 0 20px #eee;
     border-radius: 10px;
     color: white;
     border: none;
+    font-size: 14px;
   }
   
 
