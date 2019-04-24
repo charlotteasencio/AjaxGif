@@ -11,8 +11,7 @@ button {
 #heading{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    padding-top: 5px;
-    padding-bottom: 10px;
+    padding: 10px;
 }
 
 #buttons{
@@ -137,6 +136,6 @@ button {
     /* For tablets: */
     #gifs{
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 }
