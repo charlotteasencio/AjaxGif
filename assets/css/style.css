@@ -28,17 +28,18 @@ button {
     background: none;
     position: relative;
     transition:color 0.25s ease;
-    padding:10px 20px; 
+    padding: 10px 20px; 
     margin: 5px;
-    box-shadow: 0 0 20px #eee;
-    border-radius: 10px;
     cursor: pointer;
-    -webkit-border-radius: 5px;
-    border-radius: 5px; 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid rgba(34, 34, 34, 0.233)
   }
 
   .styledButton:hover {
-    color:white;
+      color: white;
   }
   
   .styledButton::after{
@@ -52,6 +53,7 @@ button {
     transition: width 0.25s ease;
     z-index: -1;
     outline: none;
+    border-radius: 10px;
   }
 
   .styledButton:hover::after{
@@ -59,14 +61,22 @@ button {
   }
 
   .addStyledButton {
-    background-image: linear-gradient(to right, #84fab0 0%, #8f9ef4 51%, #84fab0 100%);
-    padding: 15px 35px; 
+    background-image: linear-gradient(to bottom right, #f6d365 25%, #fda085 75%);
+    padding: 12px 30px; 
     cursor: pointer;
-    box-shadow: 0 0 20px #eee;
     border-radius: 10px;
-    color: white;
     border: none;
     font-size: 14px;
+    margin-top: 20px;
+    outline: none;
+    color: white;
+    box-shadow: 0 3px rgba(170, 170, 170, 0.308);
+  }
+
+  
+.addStyledButton:active {
+    box-shadow: 0 1px rgb(170, 170, 170);
+    transform: translateY(2px);
   }
   
 
@@ -97,17 +107,6 @@ button {
     justify-content: center;
     margin-top: 35px;
 }
-
-#add-tv {
-    margin-top: 20px;
-    outline: none;
-    box-shadow: 0 3px rgb(170, 170, 170);
-}
-
-#add-tv:active {
-    box-shadow: 0 1px rgb(170, 170, 170);
-    transform: translateY(2px);
-  }
 
 #topRow {
     display: flex;
