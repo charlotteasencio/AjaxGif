@@ -20,9 +20,23 @@ $(document).on("click", ".show", showTvGifs);
         $("#buttons").append(tvButton);
         }
     }
-    
-    //add new buttons from the tv show input
 
+
+    function addBackground() {
+      $(".show").on('click', function (event) {
+        if($("button").hasClass('active')) {
+          $("button").each(function() {
+            console.log(this)
+            $("button").removeClass('active')
+          });
+        }
+        $target = $(event.target);   
+           $target.addClass('active');
+           console.log($target)
+       });
+    }
+
+    //add new buttons from the tv show input
     $("#add-tv").on("click", function(event) {
         event.preventDefault();
        
@@ -30,13 +44,14 @@ $(document).on("click", ".show", showTvGifs);
         if(tv !== null && tv !== "") {
         tvArray.push(tv);
         renderButtons();
+        addBackground();
         $("#tv-input").val("");
         } 
       });
 
       //get gifs from giphy api and append 
-
       function showTvGifs(){
+
         $("#gifs").empty();
         var tvShow = $(this).attr("button-data");
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + tvShow + "&api_key=XPiB25nCUJRXzHP0Mlre0qO6sXxIP6dl&rating=pg&limit=10";
@@ -47,8 +62,7 @@ $(document).on("click", ".show", showTvGifs);
           }).then(function(response) {
     
             var results = response.data;
-    
-            
+
 
             for (var j = 0; j < results.length; j++) {
     
@@ -85,4 +99,5 @@ $(document).on("click", ".show", showTvGifs);
           }
 
       renderButtons(); 
+      addBackground();
 });

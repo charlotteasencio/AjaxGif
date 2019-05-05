@@ -60,6 +60,12 @@ button {
         width: 100%;
   }
 
+.active {
+    color: white;
+    background-image: linear-gradient(to bottom right, #f6d365 25%, #fda085 75%);
+    border: 1px solid rgba(34, 34, 34, 0.26);
+}
+
   .addStyledButton {
     background-image: linear-gradient(to bottom right, #f6d365 25%, #fda085 75%);
     padding: 12px 30px; 
